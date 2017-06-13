@@ -5,7 +5,7 @@
 
 //== Some key attributes
 //
-
+ 
 $fixed-layout:                  false !default;
 $flexbox-layout:                true !default;
 $sidebar-position:              left !default;
@@ -15,8 +15,8 @@ $colored-issue:                 true !default;
 $color-status:                  true !default;
 $use-gravatars:                 true !default;
 $use-font-awesome:              true !default;
-$use-logo:                      false !default;
-$use-retina-logo:               false !default;
+$use-logo:                      true !default;
+$use-retina-logo:               true !default;
 $use-project-tiles:             true !default;
 $issue-subject-large:           true !default;
 $enable-sidebar-toggler:        true !default;
@@ -36,9 +36,9 @@ $gray-light:                    lighten($gray-base, 17%) !default;
 $gray-lighter:                  lighten($gray-base, 35%) !default;
 $gray-lightest:                 lighten($gray-base, 46%) !default;
 
-$brand-primary:                 #584492 !default;
-$brand-text:                    #fff !default;
-$brand-accent:                  #deddef !default;
+$brand-primary:                 #E3DD7C !default;
+$brand-text:                    black !default;
+$brand-accent:                  black !default;
 
 $brand-success:                 #019851 !default;
 $brand-info:                    #409ae3 !default;
