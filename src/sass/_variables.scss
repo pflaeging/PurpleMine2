@@ -5,7 +5,7 @@
 
 //== Some key attributes
 //
- 
+
 $fixed-layout:                  false !default;
 $flexbox-layout:                true !default;
 $sidebar-position:              left !default;
@@ -16,7 +16,7 @@ $color-status:                  true !default;
 $use-gravatars:                 true !default;
 $use-font-awesome:              true !default;
 $use-logo:                      true !default;
-$use-retina-logo:               true !default;
+$use-retina-logo:               false !default;
 $use-project-tiles:             true !default;
 $issue-subject-large:           true !default;
 $enable-sidebar-toggler:        true !default;
