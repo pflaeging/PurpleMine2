@@ -8,7 +8,7 @@
 
 $fixed-layout:                  false !default;
 $flexbox-layout:                true !default;
-$sidebar-position:              left !default;
+$sidebar-position:              right !default;
 $color-priorities:              true !default;
 $color-trackers:                true !default;
 $colored-issue:                 true !default;
@@ -27,6 +27,17 @@ $top-menu-collapse:             false !default;
 //== Colors
 //
 
+// Stickiebox Colours
+$sb-green:                      #57916a;
+$sb-gold:                       #ffe9b4;
+$sb-brown:                      #a68127;
+$sb-blue:                       #202d76;
+$sb-purple:                     #885183;
+$sb-brown2:                     #631b72;
+$sb-pink:                       #a1253f;
+$sb-flashgreen:                 #91b06a;
+$sb-orange:                     #dc8c8a;
+
 $gray-base:                     #808080 !default;
 $gray-darkest:                  darken($gray-base, 40%) !default;
 $gray-darker:                   darken($gray-base, 33%) !default;
@@ -36,14 +47,17 @@ $gray-light:                    lighten($gray-base, 17%) !default;
 $gray-lighter:                  lighten($gray-base, 35%) !default;
 $gray-lightest:                 lighten($gray-base, 46%) !default;
 
-$brand-primary:                 #E3DD7C !default;
-$brand-text:                    black !default;
-$brand-accent:                  black !default;
+// $brand-primary:                 $sb-green !default;
+$brand-primary:                 $sb-purple !default;
+$brand-text:                    lighten($sb-gold, 5%) !default;
+$brand-accent:                  lighten($sb-gold, 5%) !default;
 
-$brand-success:                 #019851 !default;
-$brand-info:                    #409ae3 !default;
+// $brand-success:                 #019851 !default;
+$brand-success:                 darken($sb-brown, 10%);
+// $brand-info:                    #409ae3 !default;
+$brand-info:                    $sb-purple;
 $brand-warning:                 #ed820c !default;
-$brand-danger:                  #e74c3c !default;
+$brand-danger:                  $sb-pink !default;
 
 $state-success:                 #b5fbb7 !default;
 $state-info:                    #97cefb !default;
@@ -57,8 +71,8 @@ $state-danger:                  #f7a6a4 !default;
 $body-bg:                       #fff !default;
 $text-color:                    $gray-dark !default;
 
-$link-color:                    #4183c4 !default;
-$link-hover-color:              darken($link-color, 10%) !default;
+$link-color:                    $sb-blue !default;
+$link-hover-color:              lighten($link-color, 15%) !default;
 $link-hover-decoration:         underline !default;
 $link-closed-decoration:        line-through !default;
 $link-color-issue-closed:       $gray !default;
@@ -171,25 +185,44 @@ $table-border-color:            darken($body-bg, 13.5%) !default;
 //== Trackers priorities
 //
 
-$priority-lowest-bg:            #dff4d0 !default;
-$priority-lowest-text:          #676 !default;
-$priority-lowest-link:          #096 !default;
+// $priority-lowest-bg:            #dff4d0 !default;
+// $priority-lowest-text:          #676 !default;
+// $priority-lowest-link:          #096 !default;
+//
+// $priority-default-bg:           #fff !default;
+// $priority-default-text:         $text-color !default;
+// $priority-default-link:         $link-color !default;
+//
+// $priority-high3-bg:             #d5eaff !default;
+// $priority-high3-text:           #556 !default;
+// $priority-high3-link:           #05a !default;
+//
+// $priority-high2-bg:             #ffe1d7 !default;
+// $priority-high2-text:           #855 !default;
+// $priority-high2-link:           #b04 !default;
+//
+// $priority-highest-bg:           #ffa5a5 !default;
+// $priority-highest-text:         #944 !default;
+// $priority-highest-link:         #a03 !default;
+$priority-lowest-bg:            #fff !default;
+$priority-lowest-text:          $text-color !default;
+$priority-lowest-link:          $link-color !default;
 
 $priority-default-bg:           #fff !default;
 $priority-default-text:         $text-color !default;
 $priority-default-link:         $link-color !default;
 
-$priority-high3-bg:             #d5eaff !default;
-$priority-high3-text:           #556 !default;
-$priority-high3-link:           #05a !default;
+$priority-high3-bg:             #fff !default;
+$priority-high3-text:           $text-color !default;
+$priority-high3-link:           $link-color !default;
 
-$priority-high2-bg:             #ffe1d7 !default;
-$priority-high2-text:           #855 !default;
-$priority-high2-link:           #b04 !default;
+$priority-high2-bg:             lighten($sb-orange, 20%) !default;
+$priority-high2-text:           $text-color !default;
+$priority-high2-link:           $link-color !default;
 
-$priority-highest-bg:           #ffa5a5 !default;
-$priority-highest-text:         #944 !default;
-$priority-highest-link:         #a03 !default;
+$priority-highest-bg:           $sb-orange !default;
+$priority-highest-text:         $text-color !default;
+$priority-highest-link:         $link-color !default;
 
 
 //== Trackers links
@@ -202,29 +235,58 @@ $tracker-default-bg:            #668 !default;
 $tracker-default-text:          $brand-text !default;
 
 $tracker-default-colors-map: (
+//   1: (
+//     background:                 $brand-danger,
+//     color:                      $brand-text
+//   ),
+//   2: (
+//     background:                 $brand-info,
+//     color:                      $brand-text
+//   ),
+//   3: (
+//     background:                 $brand-success,
+//     color:                      $brand-text
+//   ),
+//   4: (
+//     background:                 $brand-primary,
+//     color:                      $brand-text
+//   ),
+//   5: (
+//     background:                 $brand-warning,
+//     color:                      $brand-text
+//   ),
+//   6: (
+//     background:                 mix($brand-success, $brand-info, 50%),
+//     color:                      $brand-text
+//   ),
+//   7: (
+//     background:                 mix($brand-primary, $brand-warning, 50%),
+//     color:                      $brand-text
+//   )
+// ) !default;
   1: (
-    background:                 $brand-danger,
-    color:                      $brand-text
+    background:                 lightgrey,
+    color:                      darken(darkgrey, 20%)
   ),
   2: (
     background:                 $brand-info,
     color:                      $brand-text
   ),
   3: (
-    background:                 $brand-success,
-    color:                      $brand-text
-  ),
-  4: (
-    background:                 $brand-primary,
-    color:                      $brand-text
-  ),
-  5: (
     background:                 $brand-warning,
     color:                      $brand-text
   ),
-  6: (
-    background:                 mix($brand-success, $brand-info, 50%),
+  4: (
+    background:                 #ffd877,
+    color:                      darken(darkgrey, 20%)
+  ),
+  5: (
+    background:                 #616fb6,
     color:                      $brand-text
+  ),
+  6: (
+    background:                 darken(darkgrey, 20%),
+    color:                      lightgrey
   ),
   7: (
     background:                 mix($brand-primary, $brand-warning, 50%),
@@ -333,10 +395,11 @@ $legend-border-color:           #e5e5e5 !default;
 //== Top
 //
 
-$top-menu-bg:                   darken($brand-primary, 15%) !default;
-$top-menu-text:                 $brand-accent !default;
-$top-menu-link:                 $brand-accent !default;
-$top-menu-link-hover:           $brand-text !default;
+$top-menu-bg:                   darken($brand-primary, 20%) !default;
+// $top-menu-text:                 $brand-accent !default;
+$top-menu-text:                 $sb-brown !default;
+$top-menu-link:                 $sb-brown !default;
+$top-menu-link-hover:           lighten($sb-brown, 20%) !default;
 
 $header-bg:                     $brand-primary !default;
 $header-text:                   $brand-text !default;
@@ -367,11 +430,12 @@ $quick-search-dropdown-border:  $gray-lighter !default;
 
 $logo-image-width:              60px !default;
 $logo-image-height:             40px !default;
-$logo-position-horizontal:      $header-padding-vertical !default;
+// $logo-position-horizontal:      $header-padding-vertical !default;
+$logo-position-horizontal:      right !default;
 $logo-position-vertical:        center !default;
 $logo-space:                    floor($header-padding-vertical / 2) !default;
 
-$main-menu-bg:                  $gray-lightest !default;
+$main-menu-bg:                  lighten($sb-gold, 0%) !default;
 $main-menu-bg-hover:            $gray-lightest !default;
 $main-menu-link:                $gray-darker !default;
 $main-menu-link-active:         #000 !default;
@@ -424,6 +488,7 @@ $tab-active-border:             $tab-border !default;
 //
 
 $sidebar-width:                 270px !default;
+$sidebar-bg:                    darken($sb-gold, 0%) !default;
 $sidebar-padding-vertical:      $padding-base-vertical !default;
 $sidebar-padding-horizontal:    $padding-side !default;
 $sidebar-width-computed:        $sidebar-width - ($sidebar-padding-horizontal * 2) - 1px !default;
@@ -437,7 +502,7 @@ $sidebar-link-active-text:      $gray-darkest !default;
 //== Flash messages (alerts)
 //
 
-$flash-success-bg:              #5cb85c !default;
+$flash-success-bg:              $sb-flashgreen !default;
 $flash-success-border:          darken($flash-success-bg, 5%) !default;
 $flash-success-text:            #fff !default;
 $flash-success-link:            #fff !default;
@@ -447,7 +512,7 @@ $flash-warning-border:          darken($flash-warning-bg, 15%) !default;
 $flash-warning-text:            #b45e10 !default;
 $flash-warning-link:            #a0540e !default;
 
-$flash-error-bg:                #d9534f !default;
+$flash-error-bg:                $sb-pink !default;
 $flash-error-border:            darken($flash-error-bg, 5%) !default;
 $flash-error-text:              #fff !default;
 $flash-error-link:              #fff !default;

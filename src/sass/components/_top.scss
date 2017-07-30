@@ -175,7 +175,8 @@
 
 #quick-search {
   margin-top: floor(($header-title-line-height + $header-padding-vertical * 2 - $input-height-base) / 2) - 1px;
-  margin-right: $header-padding-horizontal;
+  // margin-right: $header-padding-horizontal;
+  margin-right: 60px;
   float: right;
   color: $header-text;
 
@@ -190,6 +191,7 @@
   > form > input,
   > select {
     border-color: $quick-search-border;
+    border-radius: 5px;
 
     &:focus {
       border-color: $quick-search-border-focus;
