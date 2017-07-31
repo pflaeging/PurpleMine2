@@ -37,6 +37,7 @@ $sb-brown2:                     #631b72;
 $sb-pink:                       #a1253f;
 $sb-flashgreen:                 #91b06a;
 $sb-orange:                     #dc8c8a;
+$footer-color:                  lighten($sb-gold, 5%) !default;
 
 $gray-base:                     #808080 !default;
 $gray-darkest:                  darken($gray-base, 40%) !default;
